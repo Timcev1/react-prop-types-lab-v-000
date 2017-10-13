@@ -20,8 +20,8 @@ Product.propTypes = {
   producer: PropTypes.string,
   hasWatermark: PropTypes.bool,
   color: PropTypes.oneOf([
-    'white', 
-    'eggshell-white', 
+    'white',
+    'eggshell-white',
     'salmon'
   ]).isRequired,
   weight: (props, propName) =>{
@@ -29,7 +29,7 @@ Product.propTypes = {
     if (weight > 80 && weight < 300){
       return weight
     }else {
-      return 'The weight must be between 80 and 300.'
+      return new Error'The weight must be between 80 and 300.'
       }
   }
 };
