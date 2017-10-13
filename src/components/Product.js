@@ -40,3 +40,4 @@ Product.propTypes = {
       }
   }
 };
+export default Product;
