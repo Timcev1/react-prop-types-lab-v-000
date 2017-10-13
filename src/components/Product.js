@@ -7,13 +7,13 @@ class Product extends React.Component {
   render() {
     return (
       <div>Product</div>
-    );
+    )
   }
 }
 
 Product.defaultProps = {
   hasWatermark: false
-};
+}
 
 Product.propTypes = {
   name: PropTypes.string.isRequired,
