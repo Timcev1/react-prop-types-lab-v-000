@@ -34,7 +34,7 @@ Product.propTypes = {
       const weight = props[propName];
       const isValid = weight > 80 && weight < 300;
       if (weight === undefined) {
-        return new Error('The `weight` prop is required.');
+        return new Error('Weight must be a number between 80 and 300.');
       }if (isNaN(weight)) {
         return new Error('The `weight` prop is not a number.');
       }
