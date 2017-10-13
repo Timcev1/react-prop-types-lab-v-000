@@ -31,5 +31,12 @@ Product.propTypes = {
     'eggshell-white',
     'salmon'
   ]).isRequired,
-  weight: PropTypes.
+  weight: (props, propName) =>{
+    const weight = prop[propName];
+    if weight > 80 && weight < 300;{
+      return weight
+    }else {
+      return 'The weight must be between 80 and 300.'  
+      }
+  }
 };
