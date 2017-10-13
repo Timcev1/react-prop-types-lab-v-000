@@ -24,17 +24,23 @@ Product.propTypes = {
     'eggshell-white',
     'salmon'
   ]).isRequired,
-  weight: (props, propName) =>{
-    const weight = prop[propName];
-    if (weight === undefined) {
-      return new Error('The weight must be a number between 80 and 300')
+  weight: (props, propName) => {
+   const weight = props[propName];
 
-    }if (isNaN(weight)) {
-      return new Error('The weight must be a number between 80 and 300')
-    }if (weight > 80 && weight < 300) {
-      return valid;
-      }
-  },
-};
+   if (weight === undefined) {
+     return new Error('The `weight` prop is required.');
+   }
+
+   if (isNaN(weight)) {
+     return new Error('The `weight` prop is not a number.');
+   }
+
+   const isValidWeight = weight > 80 && weight < 300;
+
+   if (!isValidWeight) {
+     return new Error('The `weight` prop should range between 80 and 300.');
+   }
+ },
+}
 
 export default Product;
