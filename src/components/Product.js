@@ -30,9 +30,10 @@ Product.propTypes = {
       return weight
     }else if (weight === undefined) {
       return new Error('The weight must be a number between 80 and 300')
-      
-    }
-    else {
+
+    }else if (isNaN(weight)) {
+      return new Error('The weight must be a number between 80 and 300')
+    }else {
       return new Error('The weight must be between 80 and 300.');
       }
   },
