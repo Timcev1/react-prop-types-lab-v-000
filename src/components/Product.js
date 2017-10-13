@@ -1,4 +1,7 @@
 // Code Product Component Here
+import React from 'react';
+import PropTypes from 'prop-types';
+ 
 class Product extends React.Component {
 
   render() {
@@ -15,4 +18,3 @@ class Product extends React.Component {
     );
   }
 }
-hasWatermark
