@@ -39,7 +39,7 @@ Product.propTypes = {
         return new Error('Weight must be a number between 80 and 300.');
       }
       if (!isValid) {
-        return new Error(''Weight must be a number between 80 and 300.');
+        return new Error(Weight must be a number between 80 and 300.');
       }
     },
 }
