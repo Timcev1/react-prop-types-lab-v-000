@@ -26,8 +26,9 @@ Product.propTypes = {
   name: PropTypes.string.isRequired,
   producer: PropTypes.string,
   hasWatermark: PropTypes.bool,
-  orderInfo: PropTypes.shape({
-    customerName: PropTypes.string.isRequired,
-    orderedAt: PropTypes.number.isRequired // We're using UNIX timestamps here
-  }).isRequired
+  color: PropTypes.oneOf([
+    'white',
+    'eggshell-white',
+    'salmon'
+  ]).isRequired,
 };
