@@ -29,9 +29,9 @@ Product.propTypes = {
     if (weight > 80 && weight < 300){
       return weight
     }else {
-      return new Error('The weight must be between 80 and 300.')
+      return new Error('The weight must be between 80 and 300.');
       }
-  }
+  },
 };
 
 export default Product;
